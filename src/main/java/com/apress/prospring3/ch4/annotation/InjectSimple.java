@@ -61,7 +61,8 @@ public class InjectSimple {
     }
 
     public String toString() {
-        return    "Name :" + name + "\n"
+        return  this.getClass().getName() + "\n" 
+        		+  "Name :" + name + "\n"
                 + "Age:" + age + "\n"
                 + "Age in Seconds: " + ageInSeconds + "\n"
                 + "Height: " + height + "\n"

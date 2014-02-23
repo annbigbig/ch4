@@ -21,21 +21,23 @@ public class ConstructorConfusion {
         System.out.println("ConstructorConfusion(String) called");
         this.someValue = someValue;
     }
-
+    /*
     @Autowired
+    
     public ConstructorConfusion(@Value("90") int someValue) {
         System.out.println("ConstructorConfusion(int) called");
         this.someValue = "Number: " + Integer.toString(someValue);
     }
+    */
     
     // Use this to externalize the integer value
-    /*
+    
     @Autowired
     public ConstructorConfusion(Integer someValue) {
-        System.out.println("ConstructorConfusion(int) called");
+        System.out.println("ConstructorConfusion(int) called xx");
         this.someValue = "Number: " + Integer.toString(someValue);
     }    
-    */
+    
 
     public static void main(String[] args) {
 		

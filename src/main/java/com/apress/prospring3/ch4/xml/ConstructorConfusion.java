@@ -19,7 +19,7 @@ public class ConstructorConfusion {
     }
 
     public ConstructorConfusion(int someValue) {
-        System.out.println("ConstructorConfusion(int) called");
+        System.out.println("ConstructorConfusion(int) called ww");
         this.someValue = "Number: " + Integer.toString(someValue);
     }
 

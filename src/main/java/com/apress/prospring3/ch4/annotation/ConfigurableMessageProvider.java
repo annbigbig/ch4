@@ -20,7 +20,7 @@ public class ConfigurableMessageProvider implements MessageProvider {
     
     /*
     @Autowired
-    public ConfigurableMessageProvider(@Value("This is a configurable message") String message) {
+    public ConfigurableMessageProvider(@Value("This is a configurable message yabi") String message) {
         this.message = message;
     }
     */
@@ -28,7 +28,8 @@ public class ConfigurableMessageProvider implements MessageProvider {
     @Autowired
     public ConfigurableMessageProvider(String message) {
         this.message = message;
-    }    
+    }
+        
 
     public String getMessage() {
         return message;

@@ -29,17 +29,18 @@
     -->
 
     <!-- Sample for constructor injection -->
+    <!-- 
     <bean id="messageProvider" class="com.apress.prospring3.ch4.xml.ConfigurableMessageProvider">
         <constructor-arg>
-            <value>This is a configurable message</value>
+            <value>This is a configurable message from app-context-xml.xml</value>
         </constructor-arg>
     </bean>
+    -->
     
     <!-- Sample for constructor injection -->
-    <!--
     <bean id="messageProvider" class="com.apress.prospring3.ch4.xml.ConfigurableMessageProvider"
-        c:message="This is a configurable message"/>
-    -->
+        c:message="This is a configurable message using 'c:'namespace"/>
+    
 
     <!-- Sample for constructor confusion -->
     <bean id="constructorConfusion" class="com.apress.prospring3.ch4.xml.ConstructorConfusion">
@@ -109,7 +110,7 @@
     </bean>
     
     <!-- hierarchical application contexts -->
-    <!--
+    <!-- 
     <bean id="injectBean" class="java.lang.String">
         <constructor-arg>
             <value>Bean In Child</value>
@@ -133,8 +134,8 @@
             <ref parent="injectBean"/>
         </property>
     </bean>
-    -->
-
+	-->
+	
     <!-- collection injection samples -->
     <bean id="injectCollection" class="com.apress.prospring3.ch4.xml.CollectionInjection">
         <property name="map">
@@ -166,6 +167,18 @@
             </list>
         </property>
     </bean>      
+    
+    <!-- exercise finished by annbigbig -->
+    <bean id="ftpSender" class="com.apress.prospring3.ch4.FtpArtworkSender"/>
+    <bean id="emailSender" class="com.apress.prospring3.ch4.EmailArtworkSender"/>
+    <bean id="artworkManager" class="com.apress.prospring3.ch4.ArtworkManager">
+    	<property name="list">
+    		<list>
+    			<ref bean="ftpSender"/>
+    			<ref bean="emailSender"/>
+    		</list>
+    	</property>
+    </bean>
     
     <!-- aliasing examples -->
     <bean id="name1" name="name2 name3,name4;name5" class="java.lang.String"/>

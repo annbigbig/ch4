@@ -21,7 +21,11 @@
     
     <!-- Sample for constructor injection -->   
     <bean id="message" class="java.lang.String"
-        c:_0="This is a configurable message"/>
+        c:_0="This is a configurable message from 'app-context-annotation.xml'"/>
+    
+    <!-- this is added by annbigbig -->    
+    <bean id="someValue" class="java.lang.Integer"
+        c:_0="8270"/>
         
     <!-- Sample for collection injection -->
     <util:map id="map" map-class="java.util.HashMap">

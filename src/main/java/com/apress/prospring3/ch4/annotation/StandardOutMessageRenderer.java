@@ -3,6 +3,8 @@
  */
 package com.apress.prospring3.ch4.annotation;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,8 +30,8 @@ public class StandardOutMessageRenderer implements MessageRenderer {
         System.out.println(messageProvider.getMessage());	
 	}
 
-	@Autowired
-	//@Resource(name="messageProvider")  // Effect is the same as Autowired
+	//@Autowired
+	@Resource(name="messageProvider")  // Effect is the same as Autowired
 	public void setMessageProvider(MessageProvider provider) {
         this.messageProvider = provider;		
 	}
