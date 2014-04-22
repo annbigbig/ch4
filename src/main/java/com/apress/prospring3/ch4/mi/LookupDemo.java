@@ -21,7 +21,7 @@ public class LookupDemo {
         DemoBean standardBean = (DemoBean) ctx.getBean("standardLookupBean");
 
         displayInfo(standardBean);
-        displayInfo(abstractBean);
+        //displayInfo(abstractBean);
 	}
 	
     public static void displayInfo(DemoBean bean) {

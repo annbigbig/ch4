@@ -110,6 +110,7 @@
     </bean>
     
     <!-- hierarchical application contexts -->
+    <!-- 為什麼這裡整塊comment掉，因為下方的target1和target3的依賴會參照到父級輩ApplicationContext裡的Bean，而這裡沒有定義那個Bean -->
     <!-- 
     <bean id="injectBean" class="java.lang.String">
         <constructor-arg>
